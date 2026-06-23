@@ -703,7 +703,6 @@ footer span{color:var(--pixel)}
 <div class="detail-overlay" id="detailOverlay">
   <div class="detail-card">
     <button class="detail-close" onclick="closeDetail()">✕</button>
-    <div class="detail-icon" id="detailIcon">🎬</div>
     <div class="detail-tag"><span id="detailTag">SERVER READY</span></div>
     <h2 id="detailTitle">MOVIEBOX</h2>
     <div class="detail-desc" id="detailDesc"></div>
@@ -818,7 +817,7 @@ animateParticles();
 // ─── Detail Overlay ──────────────────────────────────────
 const sources = {
   moviebox: {
-    icon: '🎬', tag: 'SERVER READY', title: 'MOVIEBOX',
+    tag: 'SERVER READY', title: 'MOVIEBOX',
     price: 'Rp 300.000',
     desc: 'Complete streaming web app that proxies https://themoviebox.xyz/ to a clean web interface. Auto-updated, zero database, lightweight Flask backend with responsive frontend. Just deploy and go.',
     feats: [
@@ -833,7 +832,7 @@ const sources = {
     ]
   },
   cineflow: {
-    icon: '🎥', tag: 'SERVER READY', title: 'CINEFLOW',
+    tag: 'SERVER READY', title: 'CINEFLOW',
     desc: 'CineFlow streaming API client for 10 sources, movies, drama, and live TV. Super lightweight with zero database, full API documentation and example script included.',
     price: 'Rp 149.000',
     feats: [
@@ -858,7 +857,6 @@ const sources = {
 function openDetail(key) {
   const s = sources[key];
   if (!s) return;
-  document.getElementById('detailIcon').textContent = s.icon;
   document.getElementById('detailTag').textContent = s.tag;
   document.getElementById('detailTitle').textContent = s.title;
   document.getElementById('detailDesc').textContent = s.desc;
