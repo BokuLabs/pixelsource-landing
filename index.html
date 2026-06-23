@@ -295,6 +295,20 @@ nav{
 }
 
 .card-action{margin-top:4px}
+.card-price{
+  display:flex;align-items:center;justify-content:space-between;
+  margin:8px 0 4px;
+  padding:8px 0;
+  border-top:1px solid var(--border);
+}
+.card-price .price-label{
+  font-size:0.65rem;color:var(--text2);letter-spacing:0.5px;text-transform:uppercase;
+}
+.card-price .price-value{
+  font-family:var(--font-pixel);font-size:0.55rem;
+  color:rgba(0,229,160,0.9);
+  letter-spacing:0.5px;
+}
 .btn-view-details{
   display:block;width:100%;
   font-family:var(--font-pixel);font-size:0.45rem;
@@ -611,6 +625,10 @@ footer span{color:var(--pixel)}
         <span class="feature-item">Auto Refresh</span>
         <span class="feature-item">Stream Proxy</span>
         <span class="feature-item">Full Docs</span>
+      </div>
+      <div class="card-price">
+        <span class="price-label">SOURCE CODE</span>
+        <span class="price-value">Rp 149.000</span>
       </div>
       <div class="card-action">
         <a class="btn-view-details" onclick="openDetail('cineflow')">> VIEW DETAILS</a>
