@@ -625,7 +625,7 @@ footer span{color:var(--pixel)}
     <div class="card">
       <div class="tag">SERVER READY</div>
       <h3>CINEFLOW</h3>
-      <p>Python streaming API client — 10 sources in one package. Zero database, super lightweight, full API coverage with premium content access.</p>
+      <p>Python streaming API client for 10 sources — movies, drama, anime, and live TV. Super lightweight with zero database, full API documentation and integration examples included.</p>
       <div class="card-thumb"><img src="logo-source.png" alt="CineFlow"></div>
       <div class="tech-stack">
         <span class="tech-pill">Python</span>
@@ -637,10 +637,6 @@ footer span{color:var(--pixel)}
         <span class="feature-item">Zero Database</span>
         <span class="feature-item">Full API</span>
         <span class="feature-item">Premium Content</span>
-      </div>
-      <div class="card-price">
-        <span class="price-label">SOURCE CODE</span>
-        <span class="price-value">Rp 149.000</span>
       </div>
       <div class="card-action">
         <a class="btn-view-details" onclick="openDetail('cineflow')">> VIEW DETAILS</a>
@@ -713,9 +709,9 @@ footer span{color:var(--pixel)}
     <h2 id="detailTitle">MOVIEBOX</h2>
     <div class="detail-desc" id="detailDesc"></div>
     <div class="detail-feats" id="detailFeats"></div>
-    <div class="detail-price">
+    <div class="detail-price" id="detailPrice">
       <div class="detail-price-label">HARGA</div>
-      <div class="detail-price-num">Rp 300.000</div>
+      <div class="detail-price-num" id="detailPriceNum">Rp 300.000</div>
       <div class="detail-price-note">ONE-TIME · FULL SOURCE CODE</div>
     </div>
     <a class="btn-contact" id="detailContactBtn" href="https://t.me/accustor" target="_blank">▸ BUY NOW</a>
@@ -824,6 +820,7 @@ animateParticles();
 const sources = {
   moviebox: {
     icon: '🎬', tag: 'SERVER READY', title: 'MOVIEBOX',
+    price: 'Rp 300.000',
     desc: 'Complete streaming web app that proxies https://themoviebox.xyz/ to a clean web interface. Auto-updated, zero database, lightweight Flask backend with responsive frontend. Just deploy and go.',
     feats: [
       '5000+ live content', '25+ genres available',
@@ -838,7 +835,8 @@ const sources = {
   },
   cineflow: {
     icon: '🎥', tag: 'SERVER READY', title: 'CINEFLOW',
-    desc: 'Python streaming API client — 10 sources in one package. Movies, drama, anime, live TV, and premium content from Netflix, Prime, Disney+. Zero database, super lightweight, full API docs with integration examples.',
+    desc: 'Python streaming API client for 10 sources — movies, drama, anime, and live TV. Super lightweight with zero database, full API documentation and integration examples included.',
+    price: 'Rp 149.000',
     feats: [
       '10 streaming sources in one package',
       'Movies, drama, anime, live TV',
@@ -864,6 +862,13 @@ function openDetail(key) {
   document.getElementById('detailTitle').textContent = s.title;
   document.getElementById('detailDesc').textContent = s.desc;
   document.getElementById('detailFeats').innerHTML = s.feats.map(f => `<div class="detail-feat">${f}</div>`).join('');
+  const priceEl = document.getElementById('detailPrice');
+  if (s.price) {
+    priceEl.style.display = 'block';
+    document.getElementById('detailPriceNum').textContent = s.price;
+  } else {
+    priceEl.style.display = 'none';
+  }
   document.getElementById('detailOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
