@@ -238,8 +238,8 @@ footer span{color:var(--pixel)}
       <a href="/dark/" class="home-cat-card">
         <span class="hcc-icon">&#9670;</span>
         <h3>DARK TOOLS</h3>
-        <p>Source code untuk tools keamanan, dorking, checker, parser, dan utilities underground lainnya.</p>
-        <span class="hcc-status soon">COMING SOON</span>
+        <p>Source code for security tools, dorking, checkers, parsers, and other underground utilities.</p>
+        <span class="hcc-status ready">SERVER READY</span>
       </a>
       <a href="/lainnya/" class="home-cat-card">
         <span class="hcc-icon">&#9638;</span>
@@ -326,10 +326,31 @@ footer span{color:var(--pixel)}
     </div>
     <div class="cat-header">
       <h1>&#9670; <span class="hl">DARK TOOLS</span></h1>
-      <p>Source code untuk tools keamanan, dorking, checker, parser, dan utilities underground lainnya.</p>
-      <div class="cat-count">COMING SOON</div>
+      <p>Source code for security tools, dorking, checkers, parsers, and other underground utilities.</p>
+      <div class="cat-count">1 SOURCE CODE AVAILABLE</div>
     </div>
-    <div class="coming-soon"><div class="cs-icon">&#9670;</div><div class="cs-text">COMING SOON</div><div class="cs-sub">Source code tools sedang disiapkan</div></div>
+    <div class="grid">
+      <div class="card">
+        <div class="tag">CLI TOOL</div>
+        <h3>DORKPARSE PRO</h3>
+        <p>Advanced Google Dork Scanner with CC Dorking module. Find exposed files, credentials, admin panels, and leaked credit card data using automated dork queries.</p>
+        <div class="card-thumb" style="background:linear-gradient(135deg,rgba(11,16,32,0.95),rgba(0,200,255,0.08))">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <rect x="10" y="15" width="60" height="50" rx="3" stroke="#00c8ff" stroke-width="2" opacity="0.8"/>
+            <path d="M10 25h60" stroke="#00c8ff" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="18" cy="20" r="2" fill="#ff3c6f" opacity="0.8"/>
+            <circle cx="26" cy="20" r="2" fill="#ffcc00" opacity="0.8"/>
+            <circle cx="34" cy="20" r="2" fill="#00e5a0" opacity="0.8"/>
+            <text x="20" y="42" font-family="monospace" font-size="8" fill="#00c8ff" opacity="0.9">$ dorkparse</text>
+            <text x="20" y="52" font-family="monospace" font-size="6" fill="#00e5a0" opacity="0.7">scan: 45+ dorks</text>
+            <text x="20" y="60" font-family="monospace" font-size="6" fill="#ffcc00" opacity="0.7">found: 12 cards</text>
+          </svg>
+        </div>
+        <div class="tech-stack"><span class="tech-pill">PYTHON</span><span class="tech-pill">RICH TUI</span><span class="tech-pill">MULTI-ENGINE</span></div>
+        <div class="feature-grid"><span class="feature-item">90+ Site Dorks</span><span class="feature-item">CC Dork Scanner</span><span class="feature-item">Subdomain Finder</span><span class="feature-item">Multi-Engine</span></div>
+        <div class="card-action"><a class="btn-view-details" onclick="openDetail('dorkparse')">> VIEW DETAILS</a></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -399,7 +420,7 @@ for(let i=0;i<5;i++){const p=document.createElement('div');const s=6+Math.random
 function animP(){const t=Date.now()/1000;pf.querySelectorAll('div').forEach(p=>{const ph=parseFloat(p.dataset.phase);const dx=parseFloat(p.dataset.dx);const dy=parseFloat(p.dataset.dy);let x=parseFloat(p.style.left)+dx*Math.sin(t*0.3+ph)*0.5;let y=parseFloat(p.style.top)+dy;const base=parseFloat(p.style.opacity)||0.03;const br=1+0.3*Math.sin(t*0.15+ph);p.style.opacity=String(Math.min(base*br,0.1));p.style.left=((x+110)%110-5)+'%';p.style.top=((y+110)%110-5)+'%'});requestAnimationFrame(animP)}animP();
 
 // Detail
-const sources={moviebox:{tag:'SERVER READY',title:'MOVIEBOX',price:'Rp 265.000',desc:'Complete streaming web app that proxies https://themoviebox.xyz/ to a clean web interface. Auto-updated, zero database, lightweight Flask backend with responsive frontend. Just deploy and go.',feats:['5000+ live content','25+ genres available','27+ countries support','Movies + Series + Short TV','360p to 1080p quality','Multi-language subtitle','ArtPlayer v5 player','29 home page sections','Built-in image proxy','SRT to VTT auto convert','Search & trending tabs','Advanced genre/country filter','Zero database needed','Only 2 Python dependencies','Runs on 512MB RAM VPS','Full documentation']},cineflow:{tag:'SERVER READY',title:'CINEFLOW',desc:'CineFlow streaming API client for 10 sources, movies, drama, and live TV. Super lightweight with zero database, full API documentation and example script included.',price:'Rp 149.000',feats:['10 streaming sources (Dramawave, CineMovies, CineTv, etc.)','Movies, drama, anime, live TV','Dramawave (Short Drama)','Anime (Animelovers, Mobinime, Anichin)','Donghua (Bstation)','CineMovies: Netflix, Prime, Disney+ content','HLS m3u8 stream format (VLC, mpv, ExoPlayer)','Search across all sources','Zero database required','1 dependency (requests)','Full API documentation (README.md)','Example script included','Auto token refresh','Runs on Python 3.9+']},samehadaku:{tag:'SERVER READY',title:'SAMEHADAKU',price:'Rp 199.000',desc:'Samehadaku anime streaming API client with direct MP4 links, multi-quality streaming, built-in video proxy for CORS bypass, and permanent file cache. Zero database, full API documentation and example script included.',feats:['3000+ anime episodes','Direct MP4 streaming URLs','Multi-quality (360p to 1080p)','Subtitle Indonesia','Video proxy (CORS bypass)','Permanent file cache','Search & genre filtering','Episode list & schedules','8 streaming servers per episode','HLS m3u8 compatible','Zero database','Runs on Python 3.9+','Full API documentation','Example script included']}};
+const sources={moviebox:{tag:'SERVER READY',title:'MOVIEBOX',price:'Rp 265.000',desc:'Complete streaming web app that proxies https://themoviebox.xyz/ to a clean web interface. Auto-updated, zero database, lightweight Flask backend with responsive frontend. Just deploy and go.',feats:['5000+ live content','25+ genres available','27+ countries support','Movies + Series + Short TV','360p to 1080p quality','Multi-language subtitle','ArtPlayer v5 player','29 home page sections','Built-in image proxy','SRT to VTT auto convert','Search & trending tabs','Advanced genre/country filter','Zero database needed','Only 2 Python dependencies','Runs on 512MB RAM VPS','Full documentation']},cineflow:{tag:'SERVER READY',title:'CINEFLOW',desc:'CineFlow streaming API client for 10 sources, movies, drama, and live TV. Super lightweight with zero database, full API documentation and example script included.',price:'Rp 149.000',feats:['10 streaming sources (Dramawave, CineMovies, CineTv, etc.)','Movies, drama, anime, live TV','Dramawave (Short Drama)','Anime (Animelovers, Mobinime, Anichin)','Donghua (Bstation)','CineMovies: Netflix, Prime, Disney+ content','HLS m3u8 stream format (VLC, mpv, ExoPlayer)','Search across all sources','Zero database required','1 dependency (requests)','Full API documentation (README.md)','Example script included','Auto token refresh','Runs on Python 3.9+']},samehadaku:{tag:'SERVER READY',title:'SAMEHADAKU',price:'Rp 199.000',desc:'Samehadaku anime streaming API client with direct MP4 links, multi-quality streaming, built-in video proxy for CORS bypass, and permanent file cache. Zero database, full API documentation and example script included.',feats:['3000+ anime episodes','Direct MP4 streaming URLs','Multi-quality (360p to 1080p)','Subtitle Indonesia','Video proxy (CORS bypass)','Permanent file cache','Search & genre filtering','Episode list & schedules','8 streaming servers per episode','HLS m3u8 compatible','Zero database','Runs on Python 3.9+','Full API documentation','Example script included']},dorkparse:{tag:'CLI TOOL',title:'DORKPARSE PRO',price:'Rp 149.000',desc:'Advanced Google Dork Scanner with CC Dorking module. Find exposed files, credentials, admin panels, and leaked credit card data using automated dork queries. Powered by DuckDuckGo (free, no API key needed).',feats:['Custom Dork Query','Site-Targeted Scan (11 categories, 90+ dorks)','Subdomain Finder (crt.sh)','Global Dork Scan (.env, configs, logs)','CC Dork Scanner (8 categories, 45+ dorks)','Card Extraction with Luhn Validation','Brand Detection (Visa, MC, Amex, etc.)','Multi-Engine: DuckDuckGo (free) + ScrapFly','Proxy Support (rotation, auto-detect)','Rich TUI (tables, panels, progress)','Export: JSON, TXT, CSV','Cross-Platform (Win, Linux, Mac, Termux)','Bilingual Docs (EN + ID)','PyInstaller Build Script Included']}};
 function openDetail(k){const s=sources[k];if(!s)return;const t=i18n[currentLang];const tag=s.tag==='SERVER READY'?t.tag_ready:(s.tag==='COMING SOON'?t.tag_soon:s.tag);document.getElementById('detailTag').textContent=tag;document.getElementById('detailTitle').textContent=s.title;document.getElementById('detailDesc').textContent=t[k+'_detail_desc']||s.desc;document.getElementById('detailFeats').innerHTML=s.feats.map(f=>`<div class="detail-feat">${f}</div>`).join('');const pe=document.getElementById('detailPrice');if(s.price){pe.style.display='block';document.getElementById('detailPriceNum').textContent=t[k+'_price']||s.price}else{pe.style.display='none'}document.querySelector('.detail-price-label').textContent=t.price_label;document.querySelector('.detail-price-note').textContent=t.price_note;document.getElementById('detailContactBtn').textContent=t.buy_now;document.getElementById('detailOverlay').classList.add('open');document.body.style.overflow='hidden'}
 function closeDetail(){document.getElementById('detailOverlay').classList.remove('open');document.body.style.overflow=''}
 document.getElementById('detailOverlay').addEventListener('click',function(e){if(e.target===this)closeDetail()});
@@ -412,7 +433,7 @@ hero_h1:'PREMIUM<br><span class="g1">SOURCE CODE</span><br>FOR YOUR <span class=
 hero_desc:'Ready-to-deploy source codes. Streaming platforms, utilities & more. Zero database, minimal dependencies, full documentation.',
 cat_section_title:'\u25B6 <span class="hl">SOURCES</span>',
 ws_title:'WEB STREAMING',ws_desc:'Ready-to-deploy streaming platforms, media tools and content projects.',ws_status:'SERVER READY',
-dt_title:'DARK TOOLS',dt_desc:'Source code for security tools, dorking, checkers, parsers, and other underground utilities.',dt_status:'COMING SOON',
+dt_title:'DARK TOOLS',dt_desc:'Source code for security tools, dorking, checkers, parsers, and other underground utilities.',dt_status:'SERVER READY',
 ms_title:'MORE SOURCES',ms_desc:'Future source code categories and upcoming releases.',ms_status:'COMING SOON',
 trust1_title:'READY TO DEPLOY',trust1_desc:'No complex setup. Just upload and run.',
 trust2_title:'CLEAN DOCUMENTATION',trust2_desc:'Well-structured docs for easy understanding.',
@@ -422,7 +443,7 @@ footer_tagline:'Independent source code marketplace',
 ws_header_desc:'Collection of source codes for web streaming platforms. Ready to deploy, complete documentation, zero database.',
 ws_count:'3 SOURCE CODES AVAILABLE',
 ds_header_desc:'Source code for security tools, dorking, checkers, parsers, and other underground utilities.',
-ls_header_desc:'Other source codes. Bot, automation, utilities, and various tools.',ds_count:'COMING SOON',ls_count:'COMING SOON',
+ls_header_desc:'Other source codes. Bot, automation, utilities, and various tools.',ds_count:'1 SOURCE CODE AVAILABLE',ls_count:'COMING SOON',
 view_details:'> VIEW DETAILS',buy_now:'\u25B6 BUY NOW',
 price_label:'PRICE',price_note:'ONE-TIME \u00B7 FULL SOURCE CODE',
 tag_ready:'SERVER READY',tag_soon:'COMING SOON',
@@ -434,14 +455,14 @@ moviebox_price:'$17',cineflow_price:'$9',samehadaku_price:'$12',
 moviebox_detail_desc:'Complete streaming web app that proxies themoviebox.xyz to a clean web interface. Auto-updated, zero database, lightweight Flask backend with responsive frontend. Just deploy and go.',
 cineflow_detail_desc:'CineFlow streaming API client for 10 sources, movies, drama, and live TV. Super lightweight with zero database, full API documentation and example script included.',
 samehadaku_detail_desc:'Complete anime streaming web app that proxies v2.samehadaku.how to a clean web interface. Direct MP4 links, multi-quality streaming, built-in video proxy for CORS bypass, and permanent file cache. Zero database, full API documentation and example script included.',
-cs_text:'COMING SOON',cs_sub:'Source code tools are being prepared'
+dorkparse_desc:'Advanced Google Dork Scanner with CC Dorking module. Find exposed files, credentials, admin panels, and leaked credit card data using automated dork queries.',dorkparse_price:'$9',dorkparse_detail_desc:'Advanced Google Dork Scanner with CC Dorking module. Find exposed files, credentials, admin panels, and leaked credit card data using automated dork queries. Powered by DuckDuckGo (free, no API key needed). Features include site-targeted scan, subdomain finder, global dork scan, CC dork scanner with card extraction and Luhn validation, multi-engine support, proxy rotation, Rich TUI, and bilingual documentation.',cs_text:'COMING SOON',cs_sub:'Source code tools are being prepared'
 },id:{
 badge:'SOURCE CODE MARKETPLACE',
 hero_h1:'PREMIUM<br><span class="g1">SOURCE CODE</span><br>UNTUK <span class="g3">PROJEK ANDA</span>',
 hero_desc:'Source code siap deploy. Platform streaming, utilities & lainnya. Zero database, dependensi minimal, dokumentasi lengkap.',
 cat_section_title:'\u25B6 <span class="hl">SUMBER</span>',
 ws_title:'WEB STREAMING',ws_desc:'Platform streaming siap deploy, tools media, dan proyek konten.',ws_status:'SIAP DEPLOY',
-dt_title:'DARK TOOLS',dt_desc:'Source code untuk tools keamanan, dorking, checker, parser, dan utilities underground lainnya.',dt_status:'SEGERA HADIR',
+dt_title:'DARK TOOLS',dt_desc:'Source code untuk tools keamanan, dorking, checker, parser, dan utilities underground lainnya.',dt_status:'SIAP DEPLOY',
 ms_title:'SUMBER LAINNYA',ms_desc:'Kategori source code mendatang dan rilis yang akan datang.',ms_status:'SEGERA HADIR',
 trust1_title:'SIAP DEPLOY',trust1_desc:'Tidak perlu setup rumit. Upload dan jalankan.',
 trust2_title:'DOKUMENTASI RAPI',trust2_desc:'Dokumentasi terstruktur untuk kemudahan pemahaman.',
@@ -451,7 +472,7 @@ footer_tagline:'Marketplace source code independen',
 ws_header_desc:'Kumpulan source code untuk platform streaming web. Siap deploy, dokumentasi lengkap, zero database.',
 ws_count:'3 SOURCE CODE TERSEDIA',
 ds_header_desc:'Source code untuk tools keamanan, dorking, checker, parser, dan utilities underground lainnya.',
-ls_header_desc:'Source code lainnya. Bot, automation, utilities, dan berbagai macam tools.',ds_count:'SEGERA HADIR',ls_count:'SEGERA HADIR',
+ls_header_desc:'Source code lainnya. Bot, automation, utilities, dan berbagai macam tools.',ds_count:'1 SOURCE CODE TERSEDIA',ls_count:'SEGERA HADIR',
 view_details:'> LIHAT DETAIL',buy_now:'\u25B6 BELI SEKARANG',
 price_label:'HARGA',price_note:'SEKALI BAYAR \u00B7 SOURCE CODE LENGKAP',
 tag_ready:'SIAP DEPLOY',tag_soon:'SEGERA HADIR',
@@ -463,7 +484,7 @@ moviebox_price:'Rp 265.000',cineflow_price:'Rp 149.000',samehadaku_price:'Rp 199
 moviebox_detail_desc:'Aplikasi web streaming lengkap yang mem-proxy themoviebox.xyz ke antarmuka web yang bersih. Auto-update, zero database, backend Flask ringan dengan frontend responsif. Deploy dan jalankan.',
 cineflow_detail_desc:'CineFlow klien API streaming untuk 10 sumber, film, drama, dan TV live. Super ringan dengan zero database, dokumentasi API lengkap dan contoh script disertakan.',
 samehadaku_detail_desc:'Aplikasi streaming anime lengkap yang mem-proxy v2.samehadaku.how ke antarmuka web yang bersih. Tautan MP4 langsung, streaming multi-kualitas, video proxy bawaan untuk bypass CORS, dan cache file permanen. Zero database, dokumentasi API lengkap dan contoh script disertakan.',
-cs_text:'SEGERA HADIR',cs_sub:'Source code tools sedang disiapkan'
+dorkparse_desc:'Advanced Google Dork Scanner dengan modul CC Dorking. Cari file yang terekspos, credentials, admin panel, dan data kartu kredit yang bocor pakai query dork otomatis.',dorkparse_price:'Rp 149.000',dorkparse_detail_desc:'Advanced Google Dork Scanner dengan modul CC Dorking. Cari file yang terekspos, credentials, admin panel, dan data kartu kredit yang bocor pakai query dork otomatis. Pakai DuckDuckGo (gratis, gak perlu API key). Fitur termasuk site-targeted scan, subdomain finder, global dork scan, CC dork scanner dengan ekstraksi kartu dan validasi Luhn, multi-engine, rotasi proxy, Rich TUI, dan dokumentasi bilingual.',cs_text:'SEGERA HADIR',cs_sub:'Source code tools sedang disiapkan'
 }};
 
 function setLang(lang){
